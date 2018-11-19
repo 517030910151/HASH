@@ -1,12 +1,14 @@
 # HASH
 一个规模为100000 * 100000的稀疏矩阵，其中至多10000个位置被赋了值，其余位置上均为零。对矩阵进行以下三种操作：交换两行的值；交换两列的值；询问矩阵当前某个位置上的值
-// 1053 Erge's memory
-#include<iostream>
-#include<stdio.h> 
-const int HASH_MAX = 233333;
-using namespace std;
 
-struct coordinate {
+     // 1053 Erge's memory  
+       #include<iostream>
+     #include<stdio.h> 
+      const int HASH_MAX = 233333;
+             
+	     using namespace std;
+
+       struct coordinate {
 	int x;
 	int y;
 
@@ -14,12 +16,13 @@ struct coordinate {
 		x = -1;
 		y = -1;
 	}
-};
+      };
 
-coordinate cohash[HASH_MAX];
-int valhash[HASH_MAX] = { 0 };
+     coordinate cohash[HASH_MAX];
+     int valhash[HASH_MAX] = { 0 };
 
-int main() {
+     int main() 
+     {
 	ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 	int xx[100000], yy[100000], i, j, n, m;
 
@@ -74,4 +77,4 @@ int main() {
 	}
 
 	return 0;
-}
+     }
