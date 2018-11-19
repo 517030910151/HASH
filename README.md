@@ -1,14 +1,14 @@
 # HASH
-一个规模为100000 * 100000的稀疏矩阵，其中至多10000个位置被赋了值，其余位置上均为零。对矩阵进行以下三种操作：交换两行的值；交换两列的值；询问矩阵当前某个位置上的值
+一个规模为100000 * 100000的稀疏矩阵，其中至多10000个位置被赋了值，其余位置上均为零。对矩阵进行以下三种操作：交换两行的值；交换两列的值；询问矩阵当前某个位置上的值,在查询中采用哈希的办法。将矩阵元素的下标x，y映射成整数pos，分别在坐标类数组和一个整型数组的pos位置上储存坐标和值。当需要查询时，求出x，y对应的pos，查看坐标类数组的pos位置，若为查询的坐标，则找到这一项，输出其值；否则输出零。哈希表碰撞的解决直接用了线性探测法
 
      // 1053 Erge's memory  
-       #include<iostream>
-     #include<stdio.h> 
+      #include<iostream>
+      #include<stdio.h> 
       const int HASH_MAX = 233333;
              
-	     using namespace std;
+      using namespace std;
 
-       struct coordinate {
+      struct coordinate {
 	int x;
 	int y;
 
